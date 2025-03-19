@@ -6,7 +6,10 @@ import {
 	fetchAllOperators,
 } from "../../services/operator.service.js";
 
-const createOperator = async (req: Request<{}, {}, IOperator>, res: Response): Promise<void> => {
+const createOperator = async (
+	req: Request<{}, {}, IOperator>,
+	res: Response
+): Promise<void> => {
 	try {
 		const operator: IOperator = await addOperator(req.body);
 		res.status(201).json(operator);
@@ -15,7 +18,7 @@ const createOperator = async (req: Request<{}, {}, IOperator>, res: Response): P
 	}
 };
 
-const getOperators = async (req: Request, res: Response) => {
+const getOperators = async (req: Request, res: Response): Promise<void> => {
 	try {
 		const operators = await fetchAllOperators();
 		res.status(200).json(operators);
