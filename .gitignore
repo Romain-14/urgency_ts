@@ -1,0 +1,12 @@
+# Node.js
+node_modules/
+package-lock.json
+.env
+
+# TypeScript
+dist/        # Dossier de compilation TypeScript
+*.tsbuildinfo  # Cache de compilation TypeScript
+
+# Logs et OS
+logs/
+*.log
